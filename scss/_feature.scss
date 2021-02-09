@@ -1,0 +1,167 @@
+.feature {
+    
+    padding: 5.75rem 1.5rem; //92px
+    color: $grayishBlue;
+    text-align: center;
+    font-weight: $font-light;
+
+    &__intro {
+        max-width: 36rem;
+        margin: 0 auto;
+    }
+
+    &__intro__title {
+        font-size: $font-xl;
+        color: $veryDarkBlue;
+
+        @include breakpoint-up(medium) {
+            font-size: $font-xxl;
+        }
+    }
+
+    &__intro__headline {
+        padding-bottom: 1.25rem; //20px
+        font-size: $font-xl;
+        color: $veryDarkBlue;
+        font-weight: $font-bold;
+
+        @include breakpoint-up(medium) {
+            font-size: $font-xxl;
+        }
+    }
+
+    &__intro__desc {
+        display: inline-block;
+        padding-bottom: 4.75rem; //76px
+        font-size: $font-med;
+        font-weight: $font-normal;
+        line-height: 1.6;
+    }
+
+    &__grid {
+        display: grid;
+        margin: 0 auto;
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+        justify-items: center;
+
+        @include breakpoint-up(medium) {
+            max-width: 52.5rem;
+            grid-template-columns: 1fr 1fr;
+        }
+
+        @include breakpoint-up(large) {
+            max-width: 73.5rem;
+            margin: 0 auto;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(4, 1fr);
+            grid-template-areas: 
+                ".          team-builder ."
+                "supervisor team-builder calculator"
+                "supervisor karma        calculator"
+                ".          karma        .";
+        }
+    }
+
+    &__grid__item {
+        position: relative;
+        height: 14rem; //224px
+        width: 100%; 
+        max-width: 25rem; //400px
+        //margin: 0 auto;
+        padding: 1.75rem;
+        background-color: $white;
+        text-align: left;
+        border-radius: 0.25rem;
+        border-top-width: 0.25rem;
+        border-top-style: solid;
+
+        @include breakpoint-up(medium) {
+            padding-right: 4rem;
+        }
+
+        @include breakpoint-up(large) {
+            height: 15.75rem; //252px
+        }
+
+        &.supervisor {
+            border-top-color: $cyan;
+
+            & > a:hover, a:focus {
+                color: $cyan;
+            }
+
+            @include breakpoint-up(large) {
+                grid-area: supervisor;
+            }
+        }
+
+        &.team-builder {
+            border-top-color: $red;
+
+            & > a:hover, a:focus {
+                color: $red;
+            }
+
+            @include breakpoint-up(large) {
+                grid-area: team-builder;
+            }
+        }
+
+        &.karma {
+            border-top-color: $orange;
+
+            & > a:hover, a:focus {
+                color: $orange;
+            }
+
+            @include breakpoint-up(large) {
+                grid-area: karma;
+            }
+        }
+
+        &.calculator {
+            border-top-color: $blue;
+
+            & > a:hover, a:focus {
+                color: $blue;
+            }
+
+            @include breakpoint-up(large) {
+                grid-area: calculator;
+            }
+        }
+    }
+
+    &__grid__item__title {
+        display: inline-block;
+        padding-bottom: 0.25rem;
+        font-size: $font-lg;
+        font-weight: $font-bold;
+        color: $veryDarkBlue;
+
+        &:hover {
+            cursor: pointer;
+        }
+    }
+
+    &__grid__item__copy {
+        font-size: $font-sm;
+        font-weight: $font-light;
+        color: $grayishBlue;
+        line-height: 1.7;
+    }
+
+    &__grid__item__icon {
+        position: absolute;
+        bottom: 1.75rem; //28px
+        right: 1.75rem; 
+        height: 3.5rem;
+        width: 3.5rem;
+
+        @include breakpoint-up(large) {
+            height: 4.125rem;
+            width: 4.125rem;
+        }
+    }
+}

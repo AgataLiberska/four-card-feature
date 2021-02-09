@@ -1,0 +1,112 @@
+.feature {
+    
+    margin: 5.75rem 1.5rem; //92px
+    color: $grayishBlue;
+    text-align: center;
+
+    font-weight: $font-light;
+
+    &__intro {
+        max-width: 36rem;
+        margin: 0 auto;
+    }
+
+    &__intro__title {
+        font-size: $font-xl;
+        color: $veryDarkBlue;
+    }
+
+    &__intro__headline {
+        padding-bottom: 1.25rem; //20px
+        font-size: $font-xl;
+        color: $veryDarkBlue;
+        font-weight: $font-bold;
+    }
+
+    &__intro__desc {
+        display: inline-block;
+        padding-bottom: 4.75rem; //76px
+        font-size: $font-med;
+        font-weight: $font-normal;
+        line-height: 1.6;
+    }
+
+    &__grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-gap: 1.5rem 0;
+    
+    }
+
+    &__grid__item {
+        position: relative;
+        width: 100%; 
+        height: 14rem; //224px
+        padding: 1.75rem;
+        background-color: $white;
+        border-radius: 0.25rem;
+        text-align: left;
+        border-top-width: 0.25rem;
+        border-top-style: solid;
+
+        &.supervisor {
+            border-top-color: $cyan;
+
+            & > a:hover, a:focus {
+                color: $cyan;
+            }
+        }
+
+        &.team-builder {
+            border-top-color: $red;
+
+            & > a:hover, a:focus {
+                color: $red;
+            }
+        }
+
+        &.karma {
+            border-top-color: $orange;
+
+            & > a:hover, a:focus {
+                color: $orange;
+            }
+        }
+
+        &.calculator {
+            border-top-color: $blue;
+
+            & > a:hover, a:focus {
+                color: $blue;
+            }
+        }
+    }
+
+    &__grid__item__title {
+        display: inline-block;
+        padding-bottom: 0.25rem;
+        font-size: $font-lg;
+        font-weight: $font-bold;
+        color: $veryDarkBlue;
+
+        &:hover {
+            cursor: pointer;
+        }
+    }
+
+    &__grid__item__copy {
+        font-size: $font-sm;
+        font-weight: $font-light;
+        color: $grayishBlue;
+        line-height: 1.7;
+    }
+
+    &__grid__item__icon {
+        position: absolute;
+        bottom: 1.75rem; //28px
+        right: 1.75rem; 
+        height: 3.5rem;
+        width: 3.5rem;
+    
+    }
+}

@@ -31,7 +31,7 @@ a, a:visited, a:hover, a:focus {
 }
 
 .feature {
-  margin: 5.75rem 1.5rem;
+  padding: 5.75rem 1.5rem;
   color: #a3a5ae;
   text-align: center;
   font-weight: 200;
@@ -217,5 +217,30 @@ a, a:visited, a:hover, a:focus {
     height: 4.125rem;
     width: 4.125rem;
   }
+}
+
+.footer {
+  font-size: 0.875rem;
+  font-weight: 200;
+  color: #4c4e61;
+  text-align: center;
+}
+
+.footer__attribution {
+  max-width: 36rem;
+  margin: 0 auto;
+  padding-bottom: 1rem;
+}
+
+.footer__attribution__link {
+  font-weight: 400;
+  color: #4c4e61;
+}
+
+.footer__attribution__link:hover {
+  display: inline-block;
+  padding: 0 0.25rem;
+  -webkit-transform: scaleX(1.05);
+          transform: scaleX(1.05);
 }
 /*# sourceMappingURL=styles.css.map */

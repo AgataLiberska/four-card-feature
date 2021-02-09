@@ -47,11 +47,23 @@ a, a:visited, a:hover, a:focus {
   color: #4c4e61;
 }
 
+@media (min-width: 37rem) {
+  .feature__intro__title {
+    font-size: 2.5rem;
+  }
+}
+
 .feature__intro__headline {
   padding-bottom: 1.25rem;
   font-size: 1.5rem;
   color: #4c4e61;
   font-weight: 600;
+}
+
+@media (min-width: 37rem) {
+  .feature__intro__headline {
+    font-size: 2.5rem;
+  }
 }
 
 .feature__intro__desc {
@@ -65,21 +77,56 @@ a, a:visited, a:hover, a:focus {
 .feature__grid {
   display: -ms-grid;
   display: grid;
+  margin: 0 auto;
   -ms-grid-columns: 1fr;
       grid-template-columns: 1fr;
-  grid-gap: 1.5rem 0;
+  gap: 1.5rem;
+  justify-items: center;
+}
+
+@media (min-width: 37rem) {
+  .feature__grid {
+    max-width: 52.5rem;
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (min-width: 64rem) {
+  .feature__grid {
+    max-width: 73.5rem;
+    margin: 0 auto;
+    -ms-grid-columns: (1fr)[3];
+        grid-template-columns: repeat(3, 1fr);
+    -ms-grid-rows: (1fr)[4];
+        grid-template-rows: repeat(4, 1fr);
+        grid-template-areas: ".          team-builder ." "supervisor team-builder calculator" "supervisor karma        calculator" ".          karma        .";
+  }
 }
 
 .feature__grid__item {
   position: relative;
-  width: 100%;
   height: 14rem;
+  width: 100%;
+  max-width: 25rem;
   padding: 1.75rem;
   background-color: white;
-  border-radius: 0.25rem;
   text-align: left;
+  border-radius: 0.25rem;
   border-top-width: 0.25rem;
   border-top-style: solid;
+}
+
+@media (min-width: 37rem) {
+  .feature__grid__item {
+    padding-right: 4rem;
+  }
+}
+
+@media (min-width: 64rem) {
+  .feature__grid__item {
+    height: 15.75rem;
+  }
 }
 
 .feature__grid__item.supervisor {
@@ -90,12 +137,24 @@ a, a:visited, a:hover, a:focus {
   color: #45d3d3;
 }
 
+@media (min-width: 64rem) {
+  .feature__grid__item.supervisor {
+    grid-area: supervisor;
+  }
+}
+
 .feature__grid__item.team-builder {
   border-top-color: #ea5353;
 }
 
 .feature__grid__item.team-builder > a:hover, .feature__grid__item.team-builder a:focus {
   color: #ea5353;
+}
+
+@media (min-width: 64rem) {
+  .feature__grid__item.team-builder {
+    grid-area: team-builder;
+  }
 }
 
 .feature__grid__item.karma {
@@ -106,12 +165,24 @@ a, a:visited, a:hover, a:focus {
   color: #fcaf4a;
 }
 
+@media (min-width: 64rem) {
+  .feature__grid__item.karma {
+    grid-area: karma;
+  }
+}
+
 .feature__grid__item.calculator {
   border-top-color: #549ef2;
 }
 
 .feature__grid__item.calculator > a:hover, .feature__grid__item.calculator a:focus {
   color: #549ef2;
+}
+
+@media (min-width: 64rem) {
+  .feature__grid__item.calculator {
+    grid-area: calculator;
+  }
 }
 
 .feature__grid__item__title {
@@ -139,5 +210,12 @@ a, a:visited, a:hover, a:focus {
   right: 1.75rem;
   height: 3.5rem;
   width: 3.5rem;
+}
+
+@media (min-width: 64rem) {
+  .feature__grid__item__icon {
+    height: 4.125rem;
+    width: 4.125rem;
+  }
 }
 /*# sourceMappingURL=styles.css.map */

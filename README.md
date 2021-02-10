@@ -14,7 +14,7 @@ Placing a `<div>` inside the anchor tag is not a good solution, as it causes acc
 
 Instead, I solve this issue by adding an event listener on each of `<div class="feature__grid__item>` cards, which if no text is selected, triggers a click event on the link within the respective card.
 
-As there are no other links within the cards in this design, propagation would not a problem. However, to ensure that the project is scalable, I prevent event bubbling with `.stopPropagation()` method on all elements with `class="clickable"`.
+As there are no other links within the cards in this design, propagation would not a problem. However, to ensure that the project is scalable, I prevent event bubbling with `.stopPropagation()` method on all elements with `class="clickable"`. Clicking on an element with this class will not trigger a click on main link.
 
 
 

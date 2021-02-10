@@ -75,6 +75,7 @@
         border-radius: 0.25rem;
         border-top-width: 0.25rem;
         border-top-style: solid;
+        box-shadow: 0 0.75rem 1rem -0.25rem hsla(234, 12%, 34%, 0.18);
 
         @include breakpoint-up(medium) {
             padding-right: 4rem;

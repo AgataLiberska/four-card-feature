@@ -115,6 +115,8 @@ a, a:visited, a:hover, a:focus {
   border-radius: 0.25rem;
   border-top-width: 0.25rem;
   border-top-style: solid;
+  -webkit-box-shadow: 0 0.75rem 1rem -0.25rem rgba(76, 78, 97, 0.18);
+          box-shadow: 0 0.75rem 1rem -0.25rem rgba(76, 78, 97, 0.18);
 }
 
 @media (min-width: 37rem) {
